@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void colocarDesconto(float *precoOriginal, float desconto) {
+    
+    if (precoOriginal != NULL && desconto >= 0 && desconto <= 100) {
+        
+        *precoOriginal = *precoOriginal * (1 - desconto / 100);
+    } else {
+        printf("Ponteiro nulo ou desconto está inválido.\n");
+    }
+}
+
+int main() {
+    float precoOriginal, desconto;
+
+    printf("Insira o preço original do produto: ");
+    scanf("%f", &precoOriginal);
+
+    printf("Insira o valor do desconto (em porcentagem): ");
+    scanf("%f", &desconto);
+
+    printf("\nPreço original do produto: R$ %.2f\n", precoOriginal);
+
+    // Aplica o desconto
+    colocarDesconto(&precoOriginal, desconto);
+
+    printf("O desconto é: %.2f%%\n", desconto);
+    printf("Preço final após o desconto: R$ %.2f\n", precoOriginal);
+
+    return 0;
+}
