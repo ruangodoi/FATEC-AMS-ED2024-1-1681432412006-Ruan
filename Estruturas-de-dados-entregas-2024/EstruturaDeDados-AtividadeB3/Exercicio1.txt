@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+#define Tamanho 5
+
+int MaiorElemento(int *array, int tamanho) {
+    int maior = *array; 
+    
+    for (int i = 1; i < tamanho; i++) {
+        if (*(array + i) > maior) {
+            maior = *(array + i);
+        }
+    }
+    
+    return maior;
+}
+
+void preencherArray(int *array, int tamanho) {
+    for (int i = 0; i < tamanho; i++) {
+        printf("Nota %d: ", i + 1);
+        scanf("%d", array + i);
+    }
+}
+
+int main() {
+    int nota[Tamanho];
+    
+    printf("Digite as 5 notas:\n");
+    preencherArray(nota, Tamanho);
+    
+    int MaiorNota = MaiorElemento(nota, Tamanho);
+    
+    printf("A maior nota é: %d\n", MaiorNota);
+    
+    return 0;
+}

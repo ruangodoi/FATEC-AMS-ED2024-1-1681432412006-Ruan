@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+#define Tamanho 5
+
+void imprimirArray(int *array, int tamanho) {
+    printf("Elementos do array:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("%d ", *(array + i));
+    }
+    printf("\n");
+}
+
+void preencherArray(int *array, int tamanho) {
+    printf("Digite as 5 notas:\n");
+    for (int i = 0; i < tamanho; i++) {
+        printf("Nota %d: ", i + 1);
+        scanf("%d", array + i);
+    }
+}
+
+int main() {
+    int nota[Tamanho];
+    
+    preencherArray(nota, Tamanho);
+    
+    imprimirArray(nota, Tamanho);
+    
+    return 0;
+}
