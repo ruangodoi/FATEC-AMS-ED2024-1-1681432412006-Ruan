@@ -3,7 +3,7 @@
 /*                        Prof Veríssimo                         */
 /*                        Atividade B4-1                         */
 /*             Objetivo: Bubble Sort - Implementação             */
-/*                     Developer; Ruan Defavari Godoi            */
+/*                     Developer: Ruan Defavari Godoi            */
 /*                        Data:15/10/2024                        */
 /*---------------------------------------------------------------*/
 #include <stdio.h>
