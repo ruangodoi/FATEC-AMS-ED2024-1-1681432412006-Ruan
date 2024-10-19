@@ -1,5 +1,5 @@
 # Pontos de Melhoria:
---
+
 1. **Otimização com Flag de Troca**:
    O algoritmo Bubble Sort original percorre o array mesmo que ele já esteja ordenado. A melhoria consiste em adicionar uma flag para verificar se houve troca de elementos. Se não houver trocas, o algoritmo termina mais cedo.
 
